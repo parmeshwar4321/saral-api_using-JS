@@ -15,7 +15,6 @@ axios.get("http://saral.navgurukul.org/api/courses").then((res) => {
   console.log("\n********Welcome in parent page**********\n")
   let user = prompt('Choose the course!: ');
   var course_id = list[user - 1]
-
   axios.get("http://saral.navgurukul.org/api/courses/" + course_id + "/exercises").then((resp) => {
     let exercises_course = resp.data.data
     let list = []
@@ -60,3 +59,10 @@ axios.get("http://saral.navgurukul.org/api/courses").then((res) => {
     });
   });
 });
+
+
+
+
+
+// const prompt=require('prompt-sync')()
+// let name=prompt('enter your name')
